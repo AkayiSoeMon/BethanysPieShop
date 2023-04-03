@@ -104,6 +104,12 @@
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.0.0.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BethanysPieShopMobile.Core\BethanysPieShopMobile.Core.csproj">
+      <Project>{6963caab-8872-4190-8866-de2964275ea5}</Project>
+      <Name>BethanysPieShopMobile.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
