@@ -17,7 +17,7 @@ namespace BethanysPieShopMobile
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            SetContentView(Resource.Layout.pie_detail);
             // Create your application here
         }
     }
