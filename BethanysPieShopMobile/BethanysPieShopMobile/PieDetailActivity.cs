@@ -11,7 +11,7 @@ using System.Text;
 
 namespace BethanysPieShopMobile
 {
-    [Activity(Label = "PieDetailActivity")]
+    [Activity(Label = "PieDetailActivity", MainLauncher = true)]
     public class PieDetailActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
