@@ -3,10 +3,11 @@ using Android.OS;
 using Android.Widget;
 using BethanysPieShopMobile.Core.Model;
 using BethanysPieShopMobile.Core.Repository;
+using BethanysPieShopMobile.Utility;
 
 namespace BethanysPieShopMobile
 {
-    [Activity(Label = "PieDetailActivity", MainLauncher = true)]
+    [Activity(Label = "PieDetailActivity")]
     public class PieDetailActivity : Activity
     {
         private PieRepository pieRepository;
@@ -38,10 +39,10 @@ namespace BethanysPieShopMobile
             shortDescriptionTextView.Text = selectedPie.ShortDescription;
             descriptionTextView.Text = selectedPie.LongDescription;
             priceTextView.Text = "Price: " + selectedPie.Price;
-       
 
-            //var imageBitmap = ImageHelper.GetImageBitmapFromUrl(selectedPie.ImageThumbnailUrl);
-            //pieImageView.SetImageBitmap(imageBitmap);
+
+            var imageBitmap = ImageHelper.GetImageBitmapFromUrl(selectedPie.ImageThumbnailUrl);
+            pieImageView.SetImageBitmap(imageBitmap);
         }
 
         private void FindViews()
