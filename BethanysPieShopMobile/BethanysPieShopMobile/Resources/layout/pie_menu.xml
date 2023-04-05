@@ -12,6 +12,7 @@
         android:id="@+id/titleTextView"
         android:layout_gravity="center"
         android:layout_margin="10dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pieMenuRecyclerView"
         android:layout_margin="5dp"

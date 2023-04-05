@@ -18,10 +18,13 @@ namespace BethanysPieShopMobile.ViewHolders
         public ImageView PieImageView { get; set; }
         public TextView PieNameTextView { get; set; }
 
-        public PieViewHolder(View itemView) : base(itemView)
+        public PieViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
             PieImageView = itemView.FindViewById<ImageView>(Resource.Id.pieImageView);
             PieNameTextView = itemView.FindViewById<TextView>(Resource.Id.pieNameTextView);
+
+            itemView.Click += (sender, e) => listener(base.LayoutPosition);
+
         }
     }
 }

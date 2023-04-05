@@ -1,10 +1,5 @@
-﻿using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
+﻿using Android.Views;
 using Android.Widget;
-using AndroidX.AppCompat.Widget;
 using AndroidX.RecyclerView.Widget;
 using BethanysPieShopMobile.Core.Model;
 using BethanysPieShopMobile.Core.Repository;
@@ -13,15 +8,15 @@ using BethanysPieShopMobile.ViewHolders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BethanysPieShopMobile.Adapters
 {
     public class PieAdapter : RecyclerView.Adapter
         //Adapter is an abstract base class,so we need to implement a couple of methods here to override.
     {
+        public event EventHandler<int> ItemClick;
         private List<Pie> pies;
-        private View itemView;
+
 
         //Constructor - passing all the local data to the adapter to work with. 
         public PieAdapter()
@@ -47,8 +42,14 @@ namespace BethanysPieShopMobile.Adapters
         {
             View ItemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.PieViewHolder,parent, false);
 
-            PieViewHolder pieViewHolder = new PieViewHolder(itemView);
+            PieViewHolder pieViewHolder = new PieViewHolder(ItemView, OnClick);
             return pieViewHolder;
+        }
+
+        void OnClick(int position)
+        {
+            var pieId = pies[position].PieId;
+            ItemClick?.Invoke(this, pieId);
         }
     }
 }
