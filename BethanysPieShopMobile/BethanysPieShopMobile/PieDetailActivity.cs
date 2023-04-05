@@ -38,6 +38,7 @@ namespace BethanysPieShopMobile
             shortDescriptionTextView.Text = selectedPie.ShortDescription;
             descriptionTextView.Text = selectedPie.LongDescription;
             priceTextView.Text = "Price: " + selectedPie.Price;
+       
 
             //var imageBitmap = ImageHelper.GetImageBitmapFromUrl(selectedPie.ImageThumbnailUrl);
             //pieImageView.SetImageBitmap(imageBitmap);
