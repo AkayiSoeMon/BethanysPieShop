@@ -6,14 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <Button
-        android:text="Button"
+    android:background="@drawable/patternwide">
+    <ImageView
         android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/logoImageView"
+        android:src="@drawable/AkariBakery"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:text="Order cupcakes"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/MyButton"
-        android:backgroundTint="#ff3cbeac" />
+        android:id="@+id/orderButton"
+        android:backgroundTint="#363636"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:width="200dp"/>
+
 </LinearLayout>

@@ -32,6 +32,13 @@ namespace BethanysPieShopMobile
             pieLayoutManager = new LinearLayoutManager(this);
             pieRecyclerView.SetLayoutManager(pieLayoutManager);
             pieAdapter = new PieAdapter();
+            pieAdapter.ItemClick += (sender, e) => 
+            {
+                var intent = new Intent();
+                intent.SetClass(this, typeof(PieDetailActivity));
+                intent.PutExtra("selectedPieId", e); //added to specify which item to click
+                StartActivity(intent);
+            };
             pieRecyclerView.SetAdapter(pieAdapter);
         }
     }
