@@ -13,7 +13,7 @@ using System.Text;
 
 namespace BethanysPieShopMobile
 {
-    [Activity(Label = "PieMenuActivity", MainLauncher = true)]
+    [Activity(Label = "PieMenuActivity", MainLauncher = false)]
     public class PieMenuActivity : Activity
     {
         private RecyclerView pieRecyclerView;
